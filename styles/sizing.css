@@ -1,0 +1,32 @@
+/* Default sizing for larger screens (Desktop, Tablets) */
+body {
+    font-size: 16px;
+}
+
+/* Font size adjustments for smaller screens (mobile) */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* Layout adjustments for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        flex-direction: row;  /* Horizontal layout for tablets */
+    }
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 1025px) {
+    .container {
+        flex-direction: row;  /* Horizontal layout for desktops */
+    }
+    h1 {
+        font-size: 2em;  /* Larger text for desktops */
+    }
+}

@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: lightgray;
+    background-color: #B0B0B0;
 }
 
 /* Navbar */
@@ -99,15 +99,15 @@ h2 {
 
 /* Set background images */
 .project-card:nth-child(1) {
-    background-image: url('images/Picture1.jpeg');
+    background-image: url('../images/picture1.jpeg');
 }
 
 .project-card:nth-child(2) {
-    background-image: url('images/Picture2.jpeg');
+    background-image: url('../images/picture2.jpeg');
 }
 
 .project-card:nth-child(3) {
-    background-image: url('images/Picture3.jpeg');
+    background-image: url('../images/picture3.jpeg');
 }
 
 /* Add overlay with blur effect */

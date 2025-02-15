@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: lightgray;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.highlight {
+    color: #ffd700;
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+/* Project Cards */
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Project Card Basic Styles */
+.project-card {
+    width: 250px;
+    height: 200px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Set background images */
+.project-card:nth-child(1) {
+    background-image: url('Picture1.jpeg');
+}
+
+.project-card:nth-child(2) {
+    background-image: url('Picture2.jpeg');
+}
+
+.project-card:nth-child(3) {
+    background-image: url('Picture3.jpeg');
+}
+
+/* Add overlay with blur effect */
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    backdrop-filter: blur(8px); /* Apply blur effect */
+    z-index: 0;
+}
+
+/* Ensure text stays above the overlay */
+.project-card h3, .project-card p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hover Effect */
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+#contact {
+    background: #333;
+    color: white;
+    padding: 40px;
+}

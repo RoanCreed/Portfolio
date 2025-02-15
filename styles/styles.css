@@ -61,6 +61,43 @@ body {
     color: #ffd700;
 }
 
+
+/* Initially, make the hero section fully visible */
+.hero {
+    position: relative;
+    transform: translateY(0);  /* Keeps it at the top initially */
+    opacity: 1;  /* Fully visible */
+    transition: all 1s ease;  /* Smooth transition */
+}
+
+/* Keyframes for the slide-up animation */
+@keyframes slideUp {
+    0% {
+        transform: translateY(0); /* Start at original position */
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%); /* Slide up and disappear */
+        opacity: 0;  /* Fade out */
+    }
+}
+
+/* Hide the hero section with a class (to trigger animation) */
+.hero.slide-up {
+    animation: slideUp 3s forwards;
+}
+
+/* Optional: You can make the hero section stay visible for a few seconds with an initial opacity delay */
+.hero {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+
 /* Sections */
 section {
     padding: 50px 20px;

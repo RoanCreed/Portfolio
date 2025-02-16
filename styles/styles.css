@@ -1,176 +1,157 @@
-/* General Styles */
-body {
+:root {
+    --base-color: white;
+    --base-variant: #e8e9ed;
+    --mid-base-color: #d0d2d3;
+    --text-color: #111528;
+    --secondary-text: #232738;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+  }
+  
+  .darkmode {
+    --base-color: #1d1f23; /* Dark background */
+    --base-variant: #282c34; /* Darker variant for other sections */
+    --mid-base-color: #232634;
+    --text-color: #f5f5f7; /* Light text color */
+    --secondary-text: #b0b0b5; /* Lighter secondary text */
+    --primary-color: #636c77; /* Soft grey-blue */
+    --accent-color: #5e81f4; /* Vibrant blue accent */
+  }
+  
+  /* General Reset and Global Styles */
+  * {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    min-height: 100vh;
+    background-color: var(--base-color); /* Will change based on mode */
+    color: var(--text-color); /* Text color will also change */
+  }
+  
+  
+  section {
+    background-color: var(--base-variant); /* Changes with dark mode */
     text-align: center;
-    background-color: #B0B0B0;
-}
-
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: #333;
+    padding: 70px min(50px, 7%);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  h1, h2 {
+    font-size: 2rem;
+  }
+  
+  p {
+    margin: 10px 0 20px 0;
+    color: var(--secondary-text); /* Secondary text color */
+  }
+  
+  /* Button Styles */
+  button {
+    border: none;
+    padding: .8em 2em;
+    background-color: var(--primary-color);
     color: white;
+    border-radius: 4px;
+    font: inherit;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  button.cta-button {
+    background-color: var(--accent-color); /* Accent button for primary actions */
+  }
+  
+  /* Header Theme Switcher Button */
+  #theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant); /* Background of theme switch button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.logo {
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-}
-
-/* Hero Section */
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right, #007bff, #0056b3);
-    color: white;
-}
-
-.hero h1 {
-    font-size: 40px;
-}
-
-.highlight {
-    color: #ffd700;
-}
+    top: 20px;
+    right: 20px;
+  }
+  
+  #theme-switch svg {
+    fill: var(--primary-color); /* Sun/Moon icon color */
+  }
+  
+  #theme-switch svg:last-child {
+    display: none;
+  }
+  
+  .darkmode #theme-switch svg:first-child {
+    display: none;
+  }
+  
+  .darkmode #theme-switch svg:last-child {
+    display: block;
+  }
 
 
-/* Initially, make the hero section fully visible */
-.hero {
-    position: relative;
-    transform: translateY(0);  /* Keeps it at the top initially */
-    opacity: 1;  /* Fully visible */
-    transition: all 1s ease;  /* Smooth transition */
-}
-
-/* Keyframes for the slide-up animation */
-@keyframes slideUp {
-    0% {
-        transform: translateY(0); /* Start at original position */
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-100%); /* Slide up and disappear */
-        opacity: 0;  /* Fade out */
-    }
-}
-
-/* Hide the hero section with a class (to trigger animation) */
-.hero.slide-up {
-    animation: slideUp 3s forwards;
-}
-
-/* Optional: You can make the hero section stay visible for a few seconds with an initial opacity delay */
-.hero {
-    opacity: 1;
-    visibility: visible;
-}
-
-
-
-
-
-
-/* Sections */
-section {
+  
+  /* Project Section */
+  #projects {
+    background-color: var(--mid-base-color);
     padding: 50px 20px;
-}
-
-h2 {
-    font-size: 28px;
-}
-
-/* Project Cards */
-.project-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-/* Project Card Basic Styles */
-.project-card {
-    width: 250px;
-    height: 200px;
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
+    color: var(--text-color);
     text-align: center;
-    transition: transform 0.3s ease-in-out;
-    background-size: cover;
-    background-position: center;
+  }
+  
+  #projects h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .project-tiles {
+    
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+ .project-tile {
+  color: white;
+  background-color: var(--primary-color); /* Background color for project tiles */
+  padding: 20px; /* Reduce padding to fit content better */
+  width: 30%;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for background color */
+  max-height: 300px; /* Set the max height */
+  overflow: hidden; /* Prevents content from overflowing the tile */
+  display: flex; 
+  flex-direction: column; /* Ensure text is properly aligned vertically */
+  justify-content: space-between; /* Distribute space evenly */
 }
-
-/* Set background images */
-.project-card:nth-child(1) {
-    background-image: url('../images/picture1.jpeg');
-}
-
-.project-card:nth-child(2) {
-    background-image: url('../images/picture2.jpeg');
-}
-
-.project-card:nth-child(3) {
-    background-image: url('../images/picture3.jpeg');
-}
-
-/* Add overlay with blur effect */
-.project-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    backdrop-filter: blur(8px); /* Apply blur effect */
-    z-index: 0;
-}
-
-/* Ensure text stays above the overlay */
-.project-card h3, .project-card p {
-    position: relative;
-    z-index: 1;
-}
-
-/* Hover Effect */
-.project-card:hover {
-    transform: scale(1.05);
-}
-
-/* Contact Section */
-#contact {
-    background: #333;
-    color: white;
-    padding: 40px;
-}
+  
+  .project-tile:hover {
+    transform: scale(1.03);
+  }
+  
+  .project-tile h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .project-tile p {
+    color: #e8e9ed;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  

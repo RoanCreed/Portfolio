@@ -1,61 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <script defer src="scripts/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roan Creed Portfolio</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/sizing.css">
+  <script type="text/javascript" src="scripts/darkmode.js" defer></script>
 </head>
 <body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">My Portfolio</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero">
-        <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
-        <p>Frontend Developer | Designer | Creator</p>
-    </header>
-
-    <!-- About Section -->
+    <header>
+      <button id="theme-switch">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+          <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+          <path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/>
+        </svg>
+      </button>
+  
+      </header>
+  
+    <!-- ME -->
     <section id="about">
-        <h2>About Me</h2>
-        <p>I’m a passionate web developer with a focus on clean and functional design.</p>
+      <h2>Roan Creed</h2>
+      <p>First Class Computer Science Graduate</p>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste facilis commodi aperiam aspernatur. Dolores, quis distinctio eos vero minima odio dolorem facere ab? Qui cum suscipit animi, nihil dignissimos nam minima tempora.</p>
     </section>
-
+  
     <!-- Projects Section -->
     <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project-container">
-            <div class="project-card">
-                <h3>Project One</h3>
-                <p>A brief description of the project.</p>
-            </div>
-            <div class="project-card">
-                <h3>Project Two</h3>
-                <p>A brief description of the project.</p>
-            </div>
-            <div class="project-card">
-                <h3>Project Three</h3>
-                <p>A brief description of the project.</p>
-            </div>
+      <h2>My Projects</h2>
+      <div class="project-tiles">
+        <div class="project-tile">
+          <h3>Ski Nav</h3>
+          <p>Python | Swift | A*</p>
+          <p>Using open source data
+            I have created a navigation app
+            for ski slopes which will take you
+            the fastest way round a selection
+            of user chosen runs.</p>
+
         </div>
+        <div class="project-tile">
+          <h3>Stock Tracker</h3>
+          <p>C# | XAML | MVVM</p>
+          <p>Using
+            the .Net Framework (C#, XAML)
+            and MVVM I created an app to
+            help users keep track of their
+            investments. Equipped with an
+            async SQLite database, global
+            error notifications and input
+            validation. </p>
+        </div>
+        <div class="project-tile">
+          <h3>IoT Smart Lights</h3>
+          <p>C++ | Microcontrollers | A*</p>
+          <p>Developed two RGB LED lights that can communicate with each other over different WiFi networks. From scratch using C++ and hand soldered circuits.</p>
+        </div>
+      </div>
     </section>
-
-    <!-- Contact Section -->
+  
+    <!-- Contact Me Section -->
     <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: your.email@example.com</p>
+      <h2>Contact Me</h2>
+      <p>Email: RoanC14@gmail.com</p>
+      <p>Tel: 07398 112 607</p>
     </section>
-
-</body>
+  </body>
+  
 </html>

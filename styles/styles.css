@@ -9,13 +9,13 @@
   }
   
   .darkmode {
-    --base-color: #1d1f23; /* Dark background */
-    --base-variant: #282c34; /* Darker variant for other sections */
+    --base-color: #1d1f23;
+    --base-variant: #282c34;
     --mid-base-color: #232634;
-    --text-color: #f5f5f7; /* Light text color */
-    --secondary-text: #b0b0b5; /* Lighter secondary text */
-    --primary-color: #636c77; /* Soft grey-blue */
-    --accent-color: #5e81f4; /* Vibrant blue accent */
+    --text-color: #f5f5f7;
+    --secondary-text: #b0b0b5;
+    --primary-color: #636c77;
+    --accent-color: #5e81f4; 
   }
   
   /* General Reset and Global Styles */
@@ -31,28 +31,36 @@
   
   body {
     min-height: 100vh;
-    background-color: var(--base-color); /* Will change based on mode */
-    color: var(--text-color); /* Text color will also change */
+    background-color: var(--base-color);
+    color: var(--text-color);
   }
   
   
   section {
-    background-color: var(--base-variant); /* Changes with dark mode */
+    background-color: var(--base-variant);
     text-align: center;
-    padding: 70px min(50px, 7%);
+    padding: 4.2rem min(2.6rem, 7%);
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   h1, h2 {
     font-size: 2rem;
   }
-  
-  p {
-    margin: 10px 0 20px 0;
-    color: var(--secondary-text); /* Secondary text color */
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
   }
   
-  /* Button Styles */
+  p {
+    margin: 0.6rem 0 1.2rem 0;
+    color: var(--secondary-text);
+  }
+  
+
   button {
     border: none;
     padding: .8em 2em;
@@ -63,26 +71,26 @@
     text-transform: uppercase;
     font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    transition: background-color 0.3s ease;
   }
   
   button.cta-button {
-    background-color: var(--accent-color); /* Accent button for primary actions */
+    background-color: var(--accent-color);
   }
   
   /* Header Theme Switcher Button */
   #theme-switch {
-    height: 50px;
-    width: 50px;
+    height: 2.6rem;
+    width: 2.6rem;
     padding: 0;
     border-radius: 50%;
-    background-color: var(--base-variant); /* Background of theme switch button */
+    background-color: var(--base-variant);
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 1.25rem;
+    right: 1.25rem;
   }
   
   #theme-switch svg {
@@ -106,52 +114,134 @@
   /* Project Section */
   #projects {
     background-color: var(--mid-base-color);
-    padding: 50px 20px;
+    padding: 2.6rem 1.2rem;
     color: var(--text-color);
     text-align: center;
   }
   
   #projects h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
   }
   
   .project-tiles {
     
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 2.2rem;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 1.2rem;
   }
   
  .project-tile {
   color: white;
-  background-color: var(--primary-color); /* Background color for project tiles */
-  padding: 20px; /* Reduce padding to fit content better */
+  background-color: var(--primary-color);
+  background-size: cover;
+  padding: 1.3rem;
   width: 30%;
-  border-radius: 10px;
+  min-width: 15rem;
+  border-radius: 0.6rem;
   text-align: center;
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for background color */
-  max-height: 300px; /* Set the max height */
-  overflow: hidden; /* Prevents content from overflowing the tile */
-  display: flex; 
-  flex-direction: column; /* Ensure text is properly aligned vertically */
-  justify-content: space-between; /* Distribute space evenly */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+
+  max-height: 18rem;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+
+  position: relative;
+
+  z-index: 1;
+
 }
   
   .project-tile:hover {
     transform: scale(1.03);
+    
   }
   
   .project-tile h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.6rem;
   }
   
   .project-tile p {
     color: #e8e9ed;
     font-size: 1rem;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
   }
   
+
+  #ski-nav {
+    background-image: url(../images/picture1.jpeg);
+  }
+  
+  #stock-tracker {
+    background-image: url(../images/picture2.jpeg);
+  }
+
+  #iot-lights {
+    background-image: url(../images/picture3.jpeg);
+  }
+
+
+
+
+
+  .tile-content {
+  position: relative;
+  z-index: 1;
+  top: 30%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+.tile-content:hover {
+  opacity: 1;
+  transition: opacity 0.3s ease, visibility 0s 0s;
+}
+  
+.tile-content:hover p{
+  opacity: 1;
+  transition: opacity 0.3s ease, visibility 0s 0s;
+}
+
+
+
+
+  #ski-nav h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+  }
+  
+ 
+  #ski-nav:hover h3 {
+    top: 1.2rem;
+    transform: translateX(-50%);
+  }
+
+  #ski-nav h4 {
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 70%);
+    z-index: 2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+  }
+
+
+  #ski-nav:hover h4 {
+    top: 3.4rem;
+    transform: translateX(-50%);
+  }
+
+
+  #ski-nav p {
+    z-index: 1;
+  }

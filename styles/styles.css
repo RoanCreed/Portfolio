@@ -1,7 +1,10 @@
 :root {
     --base-color: white;
+    --base-color2: #edeef2;
     --base-variant: #e8e9ed;
+    --base-variant2: #e1e2e4;
     --mid-base-color: #d0d2d3;
+    --mid-base-color: #c4c8ca;
     --text-color: #111528;
     --secondary-text: #272a39;
     --primary-color: #3a435d;
@@ -10,8 +13,11 @@
   
   .darkmode {
     --base-color: #1d1f23;
+    --base-color2: #202226;
     --base-variant: #282c34;
-    --mid-base-color: #232634;
+    --base-variant2: #242830;
+    --mid-base-color: #242836;
+    --mid-base-color2: #222532;
     --text-color: #f5f5f7;
     --secondary-text: #e5e5eb;
     --primary-color: #636c77;
@@ -54,6 +60,10 @@
 
   #contact {
     text-decoration: none;
+  }
+
+  #contact h2 {
+    padding-bottom: 3%;
   }
   
   h1, h2 {
@@ -98,6 +108,7 @@
     width: 2.6rem;
     padding: 0;
     border-radius: 50%;
+    /*background: linear-gradient(135deg, var(--base-variant), var(--base-variant));*/
     background-color: var(--base-variant);
     display: flex;
     justify-content: center;
@@ -169,13 +180,15 @@
 
   z-index: 1;
 
+  user-select: none;
+
 }
 
 
   
   .project-tile:hover {
     transform: scale(1.03);
-    cursor: pointer;
+    /* *** Taken out for release *** cursor: pointer; */
   }
 
 

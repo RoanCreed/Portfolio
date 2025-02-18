@@ -8,10 +8,11 @@ function expandTile(tile) {
     document.getElementById('expanded-title').textContent = title;
     document.getElementById('expanded-description').textContent = description;
   
-    document.getElementById('overlay').style.display = 'block';
+    //**** Taken out for release ****
+    //*****document.getElementById('overlay').style.display = 'block';
 
-    // Show the expanded view (modal)
-    document.getElementById('expanded-view').style.display = 'block';
+    // Show the expanded view (modal) 
+    //****** document.getElementById('expanded-view').style.display = 'block';
     
   }
   

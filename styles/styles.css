@@ -199,7 +199,7 @@
 }
 
 .project-tile:hover h3 {
-    top: 1.2rem;
+    top: 1.3rem;
     transform: translateX(-50%);
 }
 
@@ -208,7 +208,7 @@
 }
 
 .project-tile:hover h4 {
-    top: 3rem;
+    top: 3.1rem;
     transform: translateX(-50%);
 }
   

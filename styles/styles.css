@@ -243,19 +243,20 @@
   
 
   #ski-nav {
-    background-image: url(../images/SkiNav.png);
-    object-fit: cover;
+    background: url('../images/SkiNav.png') no-repeat center center;
+    background-size: cover; /* Or use contain */
   }
   
   #stock-tracker {
-    background-image: url(../images/StockTracker.jpeg);
-    object-fit: cover;
+    background: url('../images/StockTracker.jpeg') no-repeat center center;
+    background-size: cover; /* Or use contain */
+
   }
 
   #iot-lights {
-    background-image: url(../images/IoTLight.jpeg);
-    
-    object-fit: cover;
+    background: url('../images/IoTLight.jpeg') no-repeat center center;
+    background-size: cover; /* Or use contain */
+
   }
 
 

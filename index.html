@@ -6,7 +6,7 @@
   <title>Roan Creed Portfolio</title>
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/sizing.css">
-  <script type="text/javascript" src="scripts/darkmode.js" defer></script>
+  
 </head>
 <body>
     <header>
@@ -35,7 +35,27 @@
     <section id="projects">
       <h2>My Projects</h2>
       <div class="project-tiles">
-        <div id="ski-nav" class="project-tile">
+        <div id="ski-nav" class="project-tile" onclick="expandTile(this)">
+          
+          <h3 style= "display: none;" class="tile-title">Ski Nav</h3>
+          <p style= "display: none;" class="tile-description">
+            Using open source data
+            I have created a navigation app
+            for ski slopes which will take you
+            the fastest way round a selection
+            of user chosen runs.Using open source data
+            I have created a navigation app
+            for ski slopes which will take you
+            the fastest way round a selection
+            of user chosen runs.Using open source data
+            I have created a navigation app
+            for ski slopes which will take you
+            the fastest way round a selection
+            of user chosen runs.
+          </p>
+          
+
+
           <h3>Ski Nav</h3>
           <h4>Python | Swift | A*</h4>
           <div class="tile-content">
@@ -47,8 +67,29 @@
           </div>
         </div>
 
-        <div id="stock-tracker" class="project-tile">
-            <h3>Stock Tracker</h3>
+        <div id="stock-tracker" class="project-tile" onclick="expandTile(this)">
+            
+          <h3 style= "display: none;" class="tile-title">Stock Tracker</h3>
+          <p style= "display: none;" class="tile-description">
+            Using open source data
+            I have created a navigation app
+            for ski slopes which will take you
+            the fastest way round a selection
+            of user chosen runs.Using open source data
+            I have created a navigation app
+            for ski slopes which will take you
+            the fastest way round a selection
+            of user chosen runs.Using open source data
+            I have created a navigation app
+            for ski slopes which will take you
+            the fastest way round a selection
+            of user chosen runs.
+          </p>
+          
+          
+          
+          
+          <h3>Stock Tracker</h3>
             <h4>C# | XAML | MVVM</h4>
           <div class="tile-content">
               <p>Using
@@ -62,7 +103,28 @@
           </div>
         </div>
 
-        <div id="iot-lights" class="project-tile">
+        <div id="iot-lights" class="project-tile" onclick="expandTile(this)">
+            
+          <h3 style= "display: none;" class="tile-title">IoT Smart Lights</h3>
+          <p style= "display: none;" class="tile-description">
+            Using open source data
+            I have created a navigation app
+            for ski slopes which will take you
+            the fastest way round a selection
+            of user chosen runs.Using open source data
+            I have created a navigation app
+            for ski slopes which will take you
+            the fastest way round a selection
+            of user chosen runs.Using open source data
+            I have created a navigation app
+            for ski slopes which will take you
+            the fastest way round a selection
+            of user chosen runs.
+          </p>
+
+
+
+
           <h3>IoT Smart Lights</h3>
           <h4>C++ | Microcontrollers | A*</h4>
           <div class="tile-content">
@@ -73,6 +135,13 @@
       </div>
 
     </section>
+
+    <div id="overlay"></div>
+    <div id="expanded-view" class="expanded-tile">
+      <h3 id="expanded-title"></h3>
+      <p id="expanded-description"></p>
+    </div> 
+
   
 
     <section id="contact">
@@ -80,6 +149,17 @@
       <p>Email: RoanC14@gmail.com</p>
       <p>Tel: 07398 112 607</p>
     </section>
+
+
+
+
+    <script src="scripts/darkmode.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+
+
   </body>
   
+
+
+
 </html>

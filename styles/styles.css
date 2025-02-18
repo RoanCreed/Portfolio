@@ -1,10 +1,10 @@
 :root {
     --base-color: white;
-    --base-color2: #edeef2;
+    --base-color2: #c3c7d9;
     --base-variant: #e8e9ed;
     --base-variant2: #e1e2e4;
     --mid-base-color: #d0d2d3;
-    --mid-base-color: #c4c8ca;
+    --mid-base-color2: #b5c0c4;
     --text-color: #111528;
     --secondary-text: #272a39;
     --primary-color: #3a435d;
@@ -12,12 +12,12 @@
   }
   
   .darkmode {
-    --base-color: #1d1f23;
-    --base-color2: #202226;
-    --base-variant: #282c34;
-    --base-variant2: #242830;
-    --mid-base-color: #242836;
-    --mid-base-color2: #222532;
+    --base-color: #2c2f35;
+    --base-color2: #22242a;
+    --base-variant: #2c313a;
+    --base-variant2: #272c35;
+    --mid-base-color: #272b39;
+    --mid-base-color2: #232b46;
     --text-color: #f5f5f7;
     --secondary-text: #e5e5eb;
     --primary-color: #636c77;
@@ -37,6 +37,7 @@
   
   body {
     min-height: 100vh;
+    
     background-color: var(--base-color);
     color: var(--text-color);
 
@@ -45,7 +46,9 @@
   
   
   section {
-    background-color: var(--base-variant);
+    background: linear-gradient(135deg, var(--base-variant2), var(--base-variant));
+
+    /*background-color: var(--base-variant);*/
     text-align: center;
     padding: 4.2rem min(2.6rem, 7%);
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -108,8 +111,7 @@
     width: 2.6rem;
     padding: 0;
     border-radius: 50%;
-    /*background: linear-gradient(135deg, var(--base-variant), var(--base-variant));*/
-    background-color: var(--base-variant);
+    background-color: var(--mid-base-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,7 +122,7 @@
   }
   
   #theme-switch svg {
-    fill: var(--primary-color); /* Sun/Moon icon color */
+    fill: var(--secondary-text); /* Sun/Moon icon color */
   }
   
   #theme-switch svg:last-child {
@@ -139,7 +141,9 @@
   
   /* Project Section */
   #projects {
-    background-color: var(--mid-base-color);
+    background: linear-gradient(135deg, var(--mid-base-color2), var(--mid-base-color));
+
+    /*background-color: var(--mid-base-color);*/
     padding: 2.6rem 1.2rem;
     color: var(--text-color);
     text-align: center;
@@ -160,7 +164,6 @@
   
  .project-tile {
   color: white;
-  /*background-color: var(--primary-color);*/
   background-size: cover;
   padding: 1.3rem;
   width: 30%;

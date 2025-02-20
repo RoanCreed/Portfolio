@@ -1,5 +1,6 @@
 // Function to expand the clicked tile and show detailed content
 function expandTile(tile) {
+    
     // Get the title and description from the clicked tile
     const title = tile.querySelector('.tile-title').textContent;
     const description = tile.querySelector('.tile-description').textContent;

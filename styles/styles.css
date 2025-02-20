@@ -1,10 +1,10 @@
 :root {
     --base-color: white;
     --base-color2: #c3c7d9;
-    --base-variant: #e8e9ed;
-    --base-variant2: #e1e2e4;
-    --mid-base-color: #d0d2d3;
-    --mid-base-color2: #b5c0c4;
+    --base-variant: white;
+    --base-variant2: #F5F5F7;
+    --mid-base-color: #eaf0f2;
+    --mid-base-color2: #b4c9d0;
     --text-color: #111528;
     --secondary-text: #272a39;
     --primary-color: #3a435d;
@@ -16,9 +16,9 @@
     --base-color2: #22242a;
     --base-variant: #2c313a;
     --base-variant2: #272c35;
-    --mid-base-color: #272b39;
-    --mid-base-color2: #232b46;
-    --text-color: #f5f5f7;
+    --mid-base-color: #41475c;
+    --mid-base-color2: #33384a;
+    --text-color: #fbfbfb;
     --secondary-text: #e5e5eb;
     --primary-color: #636c77;
     --accent-color: #5e81f4; 
@@ -31,9 +31,11 @@
     box-sizing: border-box;
   }
   
-  html {
-    font-family: Arial, sans-serif;
-  }
+  html  {
+
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    
   
   body {
     min-height: 100vh;
@@ -41,56 +43,71 @@
     background-color: var(--base-color);
     color: var(--text-color);
 
-    
+    overflow-x: hidden;
   }
   
   
   section {
-    background: linear-gradient(135deg, var(--base-variant2), var(--base-variant));
+    background: linear-gradient(180deg, var(--base-variant2), var(--base-variant));
 
     /*background-color: var(--base-variant);*/
-    text-align: center;
+    text-align: left;
     padding: 4.2rem min(2.6rem, 7%);
     transition: background-color 0.3s ease, color 0.3s ease;
     padding-left: 10%;
     padding-right: 10%;
+
+    min-height: 50vh;
+
   }
 
   #about {
     padding-left: 15%;
     padding-right: 15%;
+    font-size: 1rem;
   }
+
 
   #contact {
     text-decoration: none;
+    text-align: center;
   }
 
   #contact h2 {
-    padding-bottom: 3%;
+    
   }
   
-  h1, h2 {
-    font-size: 2rem;
+  h1 {
+    font-size: 4.5rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    text-align: center;
   }
 
   h4 {
     margin: 0.6rem 0 1.2rem 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
   }
   
   p {
-    margin: 0.6rem 0 1.2rem 0;
+    font-size: 1.2rem;
+    margin: 1.8rem 0 1.2rem 0;
     color: var(--secondary-text);
   }
   
 
   button {
     border: none;
-    padding: .8em 2em;
+    padding: min(0.8em);
     background-color: var(--primary-color);
     color: white;
     border-radius: 4px;
@@ -141,7 +158,7 @@
   
   /* Project Section */
   #projects {
-    background: linear-gradient(135deg, var(--mid-base-color2), var(--mid-base-color));
+    background: linear-gradient(0deg, var(--mid-base-color2), var(--mid-base-color));
 
     /*background-color: var(--mid-base-color);*/
     padding: 2.6rem 1.2rem;
@@ -165,7 +182,6 @@
  .project-tile {
   color: white;
   background-size: cover;
-  padding: 1.3rem;
   width: 30%;
   min-width: 18rem;
   min-height: 16rem;
@@ -213,11 +229,6 @@
     background: rgba(0, 0, 0, 0.75); /* Darkens when hovered */
     backdrop-filter: blur(1px);
   }
-  
-
-
-
-
 
 
 
@@ -252,9 +263,11 @@
 
   
   .project-tile p {
-    color: #e8e9ed;
+    color: #fbfbfb;
     font-size: 1rem;
-    margin-bottom: 1rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    text-align: left;
   }
   
 
@@ -278,12 +291,12 @@
 
 
 
-
+  /* Also controls the P tags */
   .tile-content {
     color: white;
     position: relative;
     z-index: 1;
-    top: 35%;
+    top: 30%;
     text-align: center;
     opacity: 0;
     transition: opacity 0.3s ease, visibility 0s 0.3s;
@@ -390,3 +403,44 @@
   }
 
 */
+
+
+
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr));
+  gap: 1.25rem;
+  padding: 6rem;
+
+  text-align: center;
+
+  justify-content: center;
+  align-content: center;
+  min-height: 0vh;
+
+}
+
+.skill {
+  background: var(--text-color);
+  color: var(--base-color);
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  border-radius: 0.6rem;
+  opacity: 0;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; 
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column; /* Aligns the h1 and h2 vertically */
+  justify-content: center; /* Centers vertically */
+  align-items: center; /* Centers horizontally */
+  height: 100vh; /* Full viewport height */
+  text-align: center; /* Centers text horizontally */
+  font-size: 3rem;
+}

@@ -411,8 +411,8 @@
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr));
-  gap: 1.25rem;
-  padding: 6rem;
+  gap: 1rem;
+  padding: 5rem;
 
   text-align: center;
 
@@ -432,6 +432,7 @@
   display: flex;
   justify-content: center; /* Centers horizontally */
   align-items: center; 
+  
 }
 
 /* Hero Section */

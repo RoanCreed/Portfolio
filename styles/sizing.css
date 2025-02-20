@@ -13,3 +13,13 @@
     }
   }
     */
+
+
+@media (max-width: 550px) {
+  p {
+    font-size: 1rem;
+  }
+  .skill {
+    font-size: 1rem;
+  }
+}

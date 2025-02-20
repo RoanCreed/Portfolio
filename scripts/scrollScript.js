@@ -26,7 +26,7 @@ gsap.to(".skill", {
     scrollTrigger: {
         trigger: ".skills-grid",
         start: "top 70%",
-        end: "top 20%",
+        end: "top 16%",
         scrub: true
     },
     opacity: 1,

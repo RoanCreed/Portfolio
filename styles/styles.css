@@ -80,6 +80,7 @@
   h1 {
     font-size: 4.5rem;
     text-align: center;
+    white-space: nowrap;
   }
 
   h2 {
@@ -432,7 +433,7 @@
   display: flex;
   justify-content: center; /* Centers horizontally */
   align-items: center; 
-  
+
 }
 
 /* Hero Section */

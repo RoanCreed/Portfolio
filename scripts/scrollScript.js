@@ -25,7 +25,7 @@ gsap.from(".hero-text2", {
 gsap.to(".skill", {
     scrollTrigger: {
         trigger: ".skills-grid",
-        start: "top 85%",
+        start: "top 70%",
         end: "top 10%",
         scrub: true
     },

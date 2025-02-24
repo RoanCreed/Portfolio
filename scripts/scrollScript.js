@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.from(".hero-text", {
     opacity: 0,
     y: 50,
-    duration: 1.75,
+    duration: 1.8,
     ease: "power2.out"
 });
 

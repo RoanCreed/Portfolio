@@ -176,40 +176,44 @@
     
     display: flex;
     justify-content: center;
-    gap: 2.2rem;
+    gap: 2rem;
     flex-wrap: wrap;
     margin-top: 1.2rem;
   }
   
- .project-tile {
-  color: white;
-  background-size: cover;
-  width: 30%;
-  min-width: 20rem;
-  min-height: 18rem;
-  border-radius: 0.6rem;
-  text-align: center;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-
-  display: flex;
-  max-height: 20rem;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-
-  position: relative;
-
-  z-index: 1;
-
-  user-select: none;
-
+  .project-link {
+    display: inline-block;  /* Makes the <a> behave like a normal block container */
+    width: auto;     /* Ensures it doesn't shrink unexpectedly */
+    text-decoration: none;  /* Removes default underline */
+    color: inherit;  /* Keeps text color unchanged */
 }
+
+.project-tile {
+    color: white;
+    background-size: cover;
+    width: 30%;
+    min-width: 20rem;
+    min-height: 18rem;
+    border-radius: 0.6rem;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+
+    position: relative;
+    z-index: 1;
+    user-select: none;
+}
+
 
 
   
   .project-tile:hover {
     transform: scale(1.03);
-    /* *** Taken out for release *** cursor: pointer; */
+    cursor: pointer;
   }
 
 

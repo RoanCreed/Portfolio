@@ -57,7 +57,7 @@
     padding-left: 10%;
     padding-right: 10%;
 
-    min-height: 50vh;
+    min-height: 65vh;
 
   }
 
@@ -163,9 +163,11 @@
     background: linear-gradient(0deg, var(--mid-base-color2), var(--mid-base-color));
 
     /*background-color: var(--mid-base-color);*/
-    padding: 2.6rem 1.2rem;
     color: var(--text-color);
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
   }
   
   #projects h2 {
@@ -173,12 +175,12 @@
   }
   
   .project-tiles {
-    
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 2.2rem;
     flex-wrap: wrap;
-    margin-top: 1.2rem;
+    border: 2px solid red;
   }
   
  .project-tile {
@@ -193,9 +195,9 @@
 
   display: flex;
   max-height: 20rem;
-  flex-direction: column;
-  justify-content: space-between;
   overflow: hidden;
+
+  
 
   position: relative;
 
@@ -209,7 +211,7 @@
   
   .project-tile:hover {
     transform: scale(1.03);
-    /* *** Taken out for release *** cursor: pointer; */
+    cursor: pointer;
   }
 
 
@@ -275,18 +277,18 @@
 
   #ski-nav {
     background: url('../images/SkiNav.png') no-repeat center center;
-    background-size: cover; /* Or use contain */
+    background-size: cover;
   }
   
   #stock-tracker {
     background: url('../images/StockTracker.jpeg') no-repeat center center;
-    background-size: cover; /* Or use contain */
+    background-size: cover;
 
   }
 
   #iot-lights {
     background: url('../images/IoTLight.jpeg') no-repeat center center;
-    background-size: cover; /* Or use contain */
+    background-size: cover;
 
   }
 
